@@ -1,0 +1,36 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocket Rush: Rescue Protocol</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="missionOverlay" class="overlay hidden">
+    <div id="missionText"></div>
+    <button id="startBtn">Start Mission</button>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <div id="hud">
+    <div>Time: <span id="timeDisplay">0.00</span>s</div>
+    <div>Level: <span id="levelTitle">Loading...</span></div>
+  </div>
+
+  <div id="endScreen" class="overlay hidden">
+    <h2 id="endTitle"></h2>
+    <p>Your time: <span id="finalTime">0.00</span>s</p>
+    <h3>Leaderboard</h3>
+    <ul id="leaderboardList"></ul>
+    <button id="nextLevelBtn">Next Level</button>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script src="leaderboard.js"></script>
+  <script src="levels.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
