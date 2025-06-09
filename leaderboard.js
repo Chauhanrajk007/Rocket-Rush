@@ -26,7 +26,7 @@ function loadLeaderboard(levelId) {
       let html = "<h3>Top Times</h3><ol>";
       snapshot.forEach(doc => {
         const data = doc.data();
-        html += `<li>${data.time}s</li>`;
+       html += `<li>${data.name || "Anonymous"} – ${data.time}s</li>`;
       });
       html += "</ol>";
       boardDiv.innerHTML = html;
