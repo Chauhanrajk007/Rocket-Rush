@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0f1c;
+  color: #e0f7fa;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background-color: #000;
+  box-shadow: 0 0 20px #00e5ff;
+  border: 2px solid #00bcd4;
+}
+
+#missionOverlay, #endScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 15, 28, 0.95);
+  color: #e0f7fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 100;
+}
+
+h1, h2 {
+  margin: 0.5em 0;
+  color: #00e5ff;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #00e5ff;
+  color: #0a0f1c;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00bcd4;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #26c6da;
+}
+
+#hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 1rem;
+  background: rgba(0,0,0,0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
