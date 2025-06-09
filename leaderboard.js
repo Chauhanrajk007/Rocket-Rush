@@ -1,12 +1,17 @@
 const db = firebase.firestore();
 
 function submitScore(levelId, timeTaken) {
+  const nameInput = document.getElementById("playerName");
+  const playerName = nameInput && nameInput.value ? nameInput.value.trim() : "Anonymous";
+
   db.collection("leaderboards").add({
     level: levelId,
+    name: playerName,
     time: timeTaken,
     timestamp: firebase.firestore.FieldValue.serverTimestamp()
   });
 }
+
 
 function loadLeaderboard(levelId) {
   const boardDiv = document.getElementById("leaderboardList");
